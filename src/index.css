@@ -18,6 +18,8 @@
 html {
   background-color: var(--bg);
   min-height: 100%;
+  scroll-padding-top: 88px;
+  scroll-padding-bottom: 110px;
 }
 
 body {
@@ -28,6 +30,14 @@ body {
   font-family: var(--main-font-family);
   font-size: 1rem;
   background-color: var(--bg);
+}
+
+body.menu-open {
+  overflow: hidden;
+  touch-action: none;
+  position: fixed;
+  inset: 0;
+  width: 100%;
 }
 
 a {

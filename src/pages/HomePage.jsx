@@ -8,108 +8,107 @@ import grayImg from '../assets/gray.png'
 import lifestyleIcon from '../assets/lifestyle_icon.png'
 import healthIcon from '../assets/health_icon.png'
 import relaxationIcon from '../assets/relaxation_icon.png'
+import { useLanguage } from '../i18n/LanguageContext'
 import './HomePage.css'
 
 export default function HomePage() {
+  const { t } = useLanguage()
+
   const scrollToLifestyle = () => {
     document.getElementById('lifestyle')?.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
     <div className="home hero">
-      {/* Hero — matches homepage.html */}
       <div className="home-hero-wrap">
         <div className="container home-hero-container">
           <div className="circle" aria-hidden="true" />
-          <div className="content mb-5">
-            <div className="header title my-5">A safe space for your mind and soul</div>
+          <div className="content">
+            <div className="header title home-hero-title">{t('home.heroTitle')}</div>
             <button
               type="button"
-              className="more_button my-5 mx-auto start"
+              className="more_button home-hero-cta mx-auto start"
               onClick={scrollToLifestyle}
             >
-              start here
+              {t('home.startHere')}
             </button>
-            <div className="image-container py-5 my-5">
-              <img src={heroImg} alt="Relaxation Image" width="90%" />
+            <div className="image-container home-hero-image">
+              <img src={heroImg} alt={t('home.heroAlt')} width="90%" />
             </div>
           </div>
         </div>
       </div>
 
-      {/* Lifestyle section */}
-      <div className="container-fluid relative index5 py-5 px-0 mx-0 first" id="lifestyle">
+      <div className="container-fluid relative index5 home-section px-0 mx-0 first" id="lifestyle">
         <div className="circle_2" aria-hidden="true" />
         <img className="swearl" src={swearlImg} alt="" width="90%" aria-hidden="true" />
 
         <div className="container relative index-2">
-          <div className="row g-5 py-4 align-items-center">
+          <div className="row g-5 home-section-row align-items-center">
             <div className="col-12 col-md-6 ps-3">
-              <img className="category-images" src={lifestyleImg} alt="Lifestyle" width="100%" />
+              <img
+                className="category-images"
+                src={lifestyleImg}
+                alt={t('home.lifestyleTitle')}
+                width="100%"
+              />
             </div>
             <div className="col-12 col-md-6 ps-3 px-lg-5">
               <div
                 className="icon-category lifestyle_icon"
                 style={{ backgroundImage: `url(${lifestyleIcon})` }}
               />
-              <div className="title pt-3">Lifestyle</div>
-              <div className="basic_text my-5">
-                Welcome to our Lifestyle section, where we explore the intricate
-                connection between the way we live and our mental well-being. Here,
-                you&apos;ll find valuable insights, practical tips, and inspiring
-                stories to help you cultivate a balanced and fulfilling life.
-              </div>
+              <div className="title home-section-title">{t('home.lifestyleTitle')}</div>
+              <div className="basic_text home-section-text">{t('home.lifestyleBody')}</div>
             </div>
-            <div className="col-12 mx-auto my-5">
+            <div className="col-12 mx-auto home-section-cta">
               <Link to="/lifestyle" className="moreButton">
-                More
+                {t('home.more')}
               </Link>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Health section */}
-      <div className="container-fluid relative index5 py-5 px-0 mx-0 second">
+      <div className="container-fluid relative index5 home-section px-0 mx-0 second" id="health">
         <div className="circle_3" aria-hidden="true" />
         <img className="gray" src={grayImg} alt="" width="90%" aria-hidden="true" />
 
-        <div className="container">
-          <div className="row g-5 py-4 align-items-center">
+        <div className="container relative index-2">
+          <div className="row g-5 home-section-row align-items-center">
+            <div className="col-12 col-md-6 ps-3">
+              <img
+                className="category-images"
+                src={healthImg}
+                alt={t('home.healthTitle')}
+                width="100%"
+              />
+            </div>
             <div className="col-12 col-md-6 ps-3 px-lg-5">
               <div
                 className="icon-category health_icon"
                 style={{ backgroundImage: `url(${healthIcon})` }}
               />
-              <div className="title pt-3">Health</div>
-              <div className="basic_text my-5">
-                Discover valuable insights, practical tips, and inspiring stories
-                to help you achieve optimal health. From nutrition and exercise to
-                sleep and preventive care, we provide the tools and knowledge you
-                need to maintain a healthy body and mind.
-              </div>
+              <div className="title home-section-title">{t('home.healthTitle')}</div>
+              <div className="basic_text home-section-text">{t('home.healthBody')}</div>
             </div>
-            <div className="col-12 col-md-6 ps-3">
-              <img className="category-images" src={healthImg} alt="Health" width="100%" />
-            </div>
-            <div className="col-12 mx-auto my-5">
+            <div className="col-12 mx-auto home-section-cta">
               <Link to="/health" className="moreButton">
-                More
+                {t('home.more')}
               </Link>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Relaxation section */}
-      <div className="container-fluid relative index5 py-5 px-0 mx-0 third">
+      <div className="container-fluid relative index5 home-section px-0 mx-0 third">
         <div className="container">
-          <div className="row g-5 py-4 align-items-center">
+          <div className="row g-5 home-section-row align-items-center">
             <div className="col-12 col-md-6 ps-3">
               <img
                 className="category-images"
                 src={relaxationImg}
-                alt="Relaxation"
+                alt={t('home.relaxationTitle')}
                 width="100%"
               />
             </div>
@@ -118,16 +117,12 @@ export default function HomePage() {
                 className="icon-category relaxation_icon"
                 style={{ backgroundImage: `url(${relaxationIcon})` }}
               />
-              <div className="title pt-3">Relaxation</div>
-              <div className="basic_text my-5">
-                Discover new ways to unwind and calm your mind. Engage in
-                insightful conversations that guide you toward finding what truly
-                brings peace and balance to your everyday life.
-              </div>
+              <div className="title home-section-title">{t('home.relaxationTitle')}</div>
+              <div className="basic_text home-section-text">{t('home.relaxationBody')}</div>
             </div>
-            <div className="col-12 mx-auto my-5">
+            <div className="col-12 mx-auto home-section-cta">
               <Link to="/relaxation" className="moreButton">
-                More
+                {t('home.more')}
               </Link>
             </div>
           </div>

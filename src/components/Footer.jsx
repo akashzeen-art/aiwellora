@@ -1,21 +1,12 @@
+import { useLanguage } from '../i18n/LanguageContext'
+
 export default function Footer() {
+  const { t } = useLanguage()
+
   return (
     <footer className="footer">
-      <div className="footer-links">
-        <a href="#" onClick={(e) => e.preventDefault()}>
-          Privacy statement
-        </a>
-        <span className="footer-sep">|</span>
-        <a href="#" onClick={(e) => e.preventDefault()}>
-          Cookie Policy
-        </a>
-        <span className="footer-sep">|</span>
-        <a href="#" onClick={(e) => e.preventDefault()}>
-          About Us
-        </a>
-      </div>
       <p className="footer-copy">
-        Copyright © 2026 All rights reserved{' '}
+        {t('footer.copyright')}{' '}
         <a href="#" onClick={(e) => e.preventDefault()}>
           AI Wellora
         </a>

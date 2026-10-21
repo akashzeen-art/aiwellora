@@ -6,26 +6,28 @@ import LifestylePage from './pages/LifestylePage'
 import HealthPage from './pages/HealthPage'
 import RelaxationPage from './pages/RelaxationPage'
 import ChatPage from './pages/ChatPage'
+import { LanguageProvider, useLanguage } from './i18n/LanguageContext'
 import './App.css'
 
-function PlaceholderPage({ title }) {
+function PlaceholderPage({ titleKey }) {
+  const { t } = useLanguage()
   return (
     <main className="page-content">
       <div className="page-inner">
-        <h1 className="title">{title}</h1>
+        <h1 className="title">{t(titleKey)}</h1>
         <p className="basic_text" style={{ textAlign: 'center' }}>
-          Coming soon.
+          {t('pages.comingSoon')}
         </p>
       </div>
     </main>
   )
 }
 
-export default function App() {
+function AppRoutes() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="app hero">
+      <div className="app">
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -33,9 +35,17 @@ export default function App() {
           <Route path="/health" element={<HealthPage />} />
           <Route path="/relaxation" element={<RelaxationPage />} />
           <Route path="/guide/:guideId" element={<ChatPage />} />
-          <Route path="/about" element={<PlaceholderPage title="About Us" />} />
+          <Route path="/about" element={<PlaceholderPage titleKey="pages.about" />} />
         </Routes>
       </div>
     </BrowserRouter>
+  )
+}
+
+export default function App() {
+  return (
+    <LanguageProvider>
+      <AppRoutes />
+    </LanguageProvider>
   )
 }
