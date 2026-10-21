@@ -1,6 +1,6 @@
-const IMG = '/health/images'
 const LIFESTYLE_IMG = '/lifestyle'
 const HEALTH_IMG = '/health'
+const RELAXATION_IMG = '/relaxation'
 
 export const lifestyleCategories = [
   { id: 90, nameKey: 'acts_of_service', image: `${LIFESTYLE_IMG}/acts_of_service.jpg` },
@@ -49,20 +49,20 @@ export const healthCategories = [
 ]
 
 export const relaxationCategories = [
-  { id: 71, nameKey: 'art_therapy', image: `${IMG}/art_therapy.jpg` },
-  { id: 45, nameKey: 'baking', image: `${IMG}/baking.jpg` },
-  { id: 41, nameKey: 'warm_bath', image: `${IMG}/warm_bath.jpg` },
-  { id: 19, nameKey: 'relaxation_taking_breaks', image: `${IMG}/relaxation_taking_breaks.jpg` },
-  { id: 44, nameKey: 'cooking', image: `${IMG}/cooking.jpg` },
-  { id: 48, nameKey: 'digital_detox', image: `${IMG}/digital_detox.jpg` },
-  { id: 49, nameKey: 'dining', image: `${IMG}/dining.jpg` },
-  { id: 47, nameKey: 'gardening', image: `${IMG}/gardening.jpg` },
-  { id: 76, nameKey: 'herbal_tea', image: `${IMG}/herbal_tea.jpg` },
-  { id: 17, nameKey: 'relaxation_massage_therapy', image: `${IMG}/relaxation_massage_therapy.jpg` },
-  { id: 6, nameKey: 'nature_walks', image: `${IMG}/nature_walks.jpg` },
-  { id: 80, nameKey: 'photography', image: `${IMG}/photography.jpg` },
-  { id: 43, nameKey: 'calming_sounds', image: `${IMG}/calming_sounds.jpg` },
-  { id: 46, nameKey: 'television', image: `${IMG}/television.jpg` },
+  { id: 71, nameKey: 'art_therapy', image: `${RELAXATION_IMG}/art_therapy.jpg` },
+  { id: 45, nameKey: 'baking', image: `${RELAXATION_IMG}/baking.jpg` },
+  { id: 41, nameKey: 'warm_bath', image: `${RELAXATION_IMG}/warm_bath.jpg` },
+  { id: 19, nameKey: 'relaxation_taking_breaks', image: `${RELAXATION_IMG}/relaxation_taking_breaks.jpg` },
+  { id: 44, nameKey: 'cooking', image: `${RELAXATION_IMG}/cooking.jpg` },
+  { id: 48, nameKey: 'digital_detox', image: `${RELAXATION_IMG}/digital_detox.jpg` },
+  { id: 49, nameKey: 'dining', image: `${RELAXATION_IMG}/dining.jpg` },
+  { id: 47, nameKey: 'gardening', image: `${RELAXATION_IMG}/gardening.jpg` },
+  { id: 76, nameKey: 'herbal_tea', image: `${RELAXATION_IMG}/herbal_tea.jpg` },
+  { id: 17, nameKey: 'relaxation_massage_therapy', image: `${RELAXATION_IMG}/relaxation_massage_therapy.jpg` },
+  { id: 6, nameKey: 'nature_walks', image: `${RELAXATION_IMG}/nature_walks.jpg` },
+  { id: 80, nameKey: 'photography', image: `${RELAXATION_IMG}/photography.jpg` },
+  { id: 43, nameKey: 'calming_sounds', image: `${RELAXATION_IMG}/calming_sounds.jpg` },
+  { id: 46, nameKey: 'television', image: `${RELAXATION_IMG}/television.jpg` },
 ]
 
 /** @deprecated use lifestyleCategories */
@@ -81,7 +81,6 @@ export function findGuideById(id) {
 
 export const navLinks = [
   { labelKey: 'nav.home', to: '/' },
-  { labelKey: 'nav.about', to: '/about' },
   { labelKey: 'nav.health', to: '/health' },
   { labelKey: 'nav.relaxation', to: '/relaxation' },
   { labelKey: 'nav.lifestyle', to: '/lifestyle' },
