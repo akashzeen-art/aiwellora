@@ -1,5 +1,6 @@
 const IMG = '/health/images'
 const LIFESTYLE_IMG = '/lifestyle'
+const HEALTH_IMG = '/health'
 
 export const lifestyleCategories = [
   { id: 90, nameKey: 'acts_of_service', image: `${LIFESTYLE_IMG}/acts_of_service.jpg` },
@@ -20,31 +21,31 @@ export const lifestyleCategories = [
 ]
 
 export const healthCategories = [
-  { id: 108, nameKey: 'alcoholism', image: `${IMG}/alcoholism.jpg` },
-  { id: 35, nameKey: 'angry', image: `${IMG}/angry.jpg` },
-  { id: 21, nameKey: 'health_burnout', image: `${IMG}/health_burnout.jpg` },
-  { id: 33, nameKey: 'community', image: `${IMG}/community.jpg` },
-  { id: 3, nameKey: 'depression', image: `${IMG}/depression.jpg` },
-  { id: 106, nameKey: 'divorce', image: `${IMG}/divorce.jpg` },
-  { id: 39, nameKey: 'fatigue', image: `${IMG}/fatigue.jpg` },
-  { id: 2, nameKey: 'grief', image: `${IMG}/grief.jpg` },
-  { id: 31, nameKey: 'insomnia', image: `${IMG}/insomnia.jpg` },
-  { id: 23, nameKey: 'health_loneliness', image: `${IMG}/health_loneliness.jpg` },
-  { id: 36, nameKey: 'nutrition', image: `${IMG}/nutrition.jpg` },
-  { id: 34, nameKey: 'ocd', image: `${IMG}/ocd.jpg` },
-  { id: 37, nameKey: 'overeating', image: `${IMG}/overeating.jpg` },
-  { id: 32, nameKey: 'panic_attacks', image: `${IMG}/panic_attacks.jpg` },
-  { id: 100, nameKey: 'paranoia', image: `${IMG}/paranoia.jpg` },
-  { id: 38, nameKey: 'peer_pressure', image: `${IMG}/peer_pressure.jpg` },
-  { id: 42, nameKey: 'pet_therapy', image: `${IMG}/pet_therapy.jpg` },
-  { id: 104, nameKey: 'secrets', image: `${IMG}/secrets.jpg` },
-  { id: 102, nameKey: 'social_anxiety', image: `${IMG}/social_anxiety.jpg` },
-  { id: 30, nameKey: 'social_media', image: `${IMG}/social_media.jpg` },
-  { id: 40, nameKey: 'sports', image: `${IMG}/sports.jpg` },
-  { id: 1, nameKey: 'stress', image: `${IMG}/stress.jpg` },
-  { id: 98, nameKey: 'strife', image: `${IMG}/strife.jpg` },
-  { id: 96, nameKey: 'unforgiveness', image: `${IMG}/unforgiveness.jpg` },
-  { id: 4, nameKey: 'walking', image: `${IMG}/walking.jpg` },
+  { id: 108, nameKey: 'alcoholism', image: `${HEALTH_IMG}/alcoholism.jpg` },
+  { id: 35, nameKey: 'angry', image: `${HEALTH_IMG}/angry.jpg` },
+  { id: 21, nameKey: 'health_burnout', image: `${HEALTH_IMG}/health_burnout.jpg` },
+  { id: 33, nameKey: 'community', image: `${HEALTH_IMG}/community.jpg` },
+  { id: 3, nameKey: 'depression', image: `${HEALTH_IMG}/depression.jpg` },
+  { id: 106, nameKey: 'divorce', image: `${HEALTH_IMG}/divorce.jpg` },
+  { id: 39, nameKey: 'fatigue', image: `${HEALTH_IMG}/fatigue.jpg` },
+  { id: 2, nameKey: 'grief', image: `${HEALTH_IMG}/grief.jpg` },
+  { id: 31, nameKey: 'insomnia', image: `${HEALTH_IMG}/insomnia.jpg` },
+  { id: 23, nameKey: 'health_loneliness', image: `${HEALTH_IMG}/health_loneliness.jpg` },
+  { id: 36, nameKey: 'nutrition', image: `${HEALTH_IMG}/nutrition.jpg` },
+  { id: 34, nameKey: 'ocd', image: `${HEALTH_IMG}/ocd.jpg` },
+  { id: 37, nameKey: 'overeating', image: `${HEALTH_IMG}/overeating.jpg` },
+  { id: 32, nameKey: 'panic_attacks', image: `${HEALTH_IMG}/panic_attacks.jpg` },
+  { id: 100, nameKey: 'paranoia', image: `${HEALTH_IMG}/paranoia.jpg` },
+  { id: 38, nameKey: 'peer_pressure', image: `${HEALTH_IMG}/peer_pressure.jpg` },
+  { id: 42, nameKey: 'pet_therapy', image: `${HEALTH_IMG}/pet_therapy.jpg` },
+  { id: 104, nameKey: 'secrets', image: `${HEALTH_IMG}/secrets.jpg` },
+  { id: 102, nameKey: 'social_anxiety', image: `${HEALTH_IMG}/social_anxiety.jpg` },
+  { id: 30, nameKey: 'social_media', image: `${HEALTH_IMG}/social_media.jpg` },
+  { id: 40, nameKey: 'sports', image: `${HEALTH_IMG}/sports.jpg` },
+  { id: 1, nameKey: 'stress', image: `${HEALTH_IMG}/stress.jpg` },
+  { id: 98, nameKey: 'strife', image: `${HEALTH_IMG}/strife.jpg` },
+  { id: 96, nameKey: 'unforgiveness', image: `${HEALTH_IMG}/unforgiveness.jpg` },
+  { id: 4, nameKey: 'walking', image: `${HEALTH_IMG}/walking.jpg` },
 ]
 
 export const relaxationCategories = [
